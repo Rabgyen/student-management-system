@@ -1,6 +1,9 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +16,23 @@
 
 <body>
   <?php
-  include("components/sidebar.html")
+
+  $page = $_GET['page'] ?? 'home';
+
+  include("components/sidebar.php");
+  
+
+  if($page === 'dashboard'){
+    include("components/dashboard.php");
+  }else{
+    include("components/home.php");
+  }
   ?>
 </body>
 
 </html>
+
+<?php
+  $_SESSION["username"] = "Rabgyen Moktan";
+  $_SESSION["role"] = "Admin";
+?>

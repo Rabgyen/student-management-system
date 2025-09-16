@@ -1,21 +1,25 @@
-<aside class="h-screen w-[220px] border-2 border-black p-2 flex flex-col gap-4">
-    <div class="flex items-center gap-2">
+<aside class="h-screen w-[220px] p-2 flex flex-col gap-4">
+    <section class="flex items-center gap-2">
         <img src="img/RSM-logo.png" alt="RSM-logo" class="w-8 h-8 rounded-full shadow-xl">
         <h1 class="font-bold">RSM Institution</h1>
-    </div>
+    </section>
     <div class="flex items-center bg-[#fcffff] gap-2 p-2 rounded-xl shadow-sm">
         <div class="px-2 py-1 bg-[#cecece] rounded-full"><i class="fa-solid fa-user"></i></div>
         <div>
-            <p class="text-xs font-bold">User Name</p>
-            <p class="text-[10px]">Admin</p>
+            <?php
+            echo "<p class='text-xs font-bold'>{$_SESSION["username"]}</p>";
+            ?>
+            <?php
+            echo "<p class='text-[10px]'>{$_SESSION["role"]}</p>";
+            ?>
         </div>
     </div>
-    <div class="flex flex-1 justify-between flex-col">
+    <section class="flex flex-1 justify-between flex-col">
         <div class="opacity-80">
             <p class="text-xs opacity-70">Daily operation</p>
             <div class="flex items-center gap-2 py-2 px-3 ">
                 <i class="fa-solid fa-table-columns"></i>
-                <p class="text-xs">Dashboard</p>
+                <a href="index.php?page=dashboard" class="text-xs">Dashboard</a>
             </div>
             <div class="flex items-center gap-2 p-2">
                 <i class="fa-solid fa-chalkboard-user"></i>
@@ -43,11 +47,15 @@
                 <div class="py-2 flex items-center px-2 mt-2 mb-4 gap-2">
                     <img src="img/random-user.png" alt="RSM-logo" class="w-8 h-8 rounded-full">
                     <span>
-                        <p class="text-xs font-bold">User Name</p>
-                        <p class="text-xs">Role</p>
+                        <?php
+                        echo "<p class='text-xs font-bold'>{$_SESSION["username"]}</p>";
+                        ?>
+                        <?php
+                        echo "<p class='text-[10px]'>{$_SESSION["role"]}</p>";
+                        ?>
                     </span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </aside>
