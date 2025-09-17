@@ -24,6 +24,10 @@
 
   if($page === 'dashboard'){
     include("components/dashboard.php");
+  }elseif($page === 'staff'){
+    include("components/staff.php");
+  }elseif($page === 'student'){
+    include("components/student.php");
   }else{
     include("components/home.php");
   }

@@ -23,11 +23,11 @@
             </div>
             <div class="flex items-center gap-2 p-2">
                 <i class="fa-solid fa-chalkboard-user"></i>
-                <p class="text-xs">Manage Staffs</p>
+                <a href="index.php?page=staff" class="text-xs">Manage Staffs</a>
             </div>
             <div class="flex items-center gap-2 p-2">
                 <i class="fa-solid fa-users"></i>
-                <p class="text-xs">Manage Students</p>
+                <a href="index.php?page=student" class="text-xs">Manage Students</a>
             </div>
             <div class="flex items-center gap-2 p-2">
                 <i class="fa-solid fa-table-columns"></i>
