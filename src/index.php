@@ -17,19 +17,22 @@
 <body>
   <?php
 
-  $page = $_GET['page'] ?? 'home';
+  $page = $_GET['page'] ?? 'dashboard';
 
   include("components/sidebar.php");
   
 
   if($page === 'dashboard'){
-    include("components/dashboard.php");
+    include("pages/dashboard.php");
   }elseif($page === 'staff'){
-    include("components/staff.php");
+    include("pages/staff.php");
   }elseif($page === 'student'){
-    include("components/student.php");
-  }else{
-    include("components/home.php");
+    include("pages/student.php");
+  }elseif($page === 'course'){
+    include("pages/courses.php");
+  }
+  else{
+    include("pages/dashboard.php");
   }
   ?>
 </body>
@@ -39,4 +42,8 @@
 <?php
   $_SESSION["username"] = "Rabgyen Moktan";
   $_SESSION["role"] = "Admin";
+  $_SESSION["num_student"] = 4567;
+  $_SESSION["num_staff"] = 25;
+  $_SESSION["num_stakeholder"] = 10;
+  $_SESSION["num_course"] = 8;
 ?>

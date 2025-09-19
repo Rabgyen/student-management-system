@@ -30,8 +30,8 @@
                 <a href="index.php?page=student" class="text-xs">Manage Students</a>
             </div>
             <div class="flex items-center gap-2 p-2">
-                <i class="fa-solid fa-table-columns"></i>
-                <p class="text-xs">Dashboard</p>
+                <i class="fa-solid fa-book"></i>
+                <a href="index.php?page=course" class="text-xs">Courses</a>
             </div>
         </div>
         <div class="flex flex-col opacity-80 gap-2 px-2">
