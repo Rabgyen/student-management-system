@@ -57,7 +57,7 @@ $result = mysqli_query($conn, $sql);
     <header class="text-md flex flex-col gap-2 ">
         <div class="flex justify-between">
             <h1 style="opacity: 70%; font-size: 18px;">Manage Staffs</h1>
-            <div class="text-xs" style="background-color: #3B38A0; color: white; border-radius: 8px; padding: 10px"><a href="#">+ Add new student</a></div>
+            <div class="text-xs" style="background-color: #3B38A0; color: white; border-radius: 8px; padding: 10px"><a href="#">+ Add new staff</a></div>
         </div>
         <div class="flex items-center gap-2">
             <div class=" flex justify-center items-center text-4xl rounded-xl shadow-xl" style="height: 60px; width: 60px; background-color: #f7f7f7;border: 1px solid #DDDAD0"><i class="fa-solid fa-graduation-cap"></i></div>

@@ -57,7 +57,7 @@ $result = mysqli_query($conn, $sql);
     <header class="text-md flex flex-col gap-2 ">
         <div class="flex justify-between">
             <h1 style="opacity: 70%; font-size: 18px;">Manage Students</h1>
-            <div class="text-xs" style="background-color: #3B38A0; color: white; border-radius: 8px; padding: 10px"><a href="#">+ Add new student</a></div>
+            <div class="text-xs" style="background-color: #3B38A0; color: white; border-radius: 8px; padding: 10px"><a href="pages/addStudentForm.php">+ Add new student</a></div>
         </div>
         <div class="flex items-center gap-2">
             <div class=" flex justify-center items-center text-4xl rounded-xl shadow-xl" style="height: 60px; width: 60px; background-color: #f7f7f7;border: 1px solid #DDDAD0"><i class="fa-solid fa-graduation-cap"></i></div>
@@ -85,10 +85,12 @@ $result = mysqli_query($conn, $sql);
                 <tr>
                     <th>SN</th>
                     <th>Name</th>
-                    <th>Course</th>
                     <th>Email</th>
-                    <th>Semester</th>
+                    <th>Course</th>
+                    <TH>Phone no</TH>
                     <th>Admission Date</th>
+                    <th>Semester</th>
+                    <th>Address</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -100,10 +102,12 @@ $result = mysqli_query($conn, $sql);
                         echo "<tr >";
                         echo "<td>" . $count . "</td>";
                         echo "<td> " . $row['name'] . "</td>";
+                        echo "<td >" . $row['email'] . "</td>";
                         echo "<td>" . $row['course'] . "</td>";
-                        echo "<td >" . "Not available" . "</td>";
-                        echo "<td >" . $row['semester'] . "</td>";
+                        echo "<td>" . $row['phone']. "</td>";
                         echo "<td >" . $row['admission_date'] . "</td>";
+                        echo "<td >" . $row['semester'] . "</td>";
+                        echo "<td >" . $row['address'] . "</td>";
                         echo "<td>" . "<a href='#'>Take action</a>" . "</td>";
                         echo "</tr>";
 

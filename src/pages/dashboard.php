@@ -10,6 +10,8 @@
     $course_result = mysqli_query($conn, "SELECT COUNT(DISTINcT course) AS total_courses FROM student");
     $course_count = mysqli_fetch_assoc($course_result)['total_courses'];
 
+    mysqli_close($conn);
+
 ?>
 
 <div class="flex-1 flex flex-col gap-4 h-full m-2 bg-white rounded-md shadow-md border-2 border-gray-200" style="border:2px solid #eeeeef; padding: 20px;">
@@ -51,7 +53,7 @@
             </div>
         </div>
         <div class="flex items-center bg-[#fcffff] gap-2 p-2 rounded-xl shadow-sm flex-1">
-            <div class="px-2 py-2 bg-[#cecece] rounded-full"><i class="fa-solid fa-people-group"></i></div>
+            <div class="px-2 py-2 bg-[#cecece] rounded-full"><i class="fa-solid fa-chalkboard-user"></i></div>
             <div class="text-xs font-bold">
                 <p>Active Staffs</p>
                 <?php
@@ -60,7 +62,7 @@
             </div>
         </div>
         <div class="flex items-center bg-[#fcffff] gap-2 p-2 rounded-xl shadow-sm flex-1">
-            <div class="px-2 py-2 bg-[#cecece] rounded-full"><i class="fa-solid fa-people-group"></i></div>
+            <div class="px-2 py-2 bg-[#cecece] rounded-full"><i class="fa-solid fa-book"></i></div>
             <div class="text-xs font-bold">
                 <p>Courses</p>
                 <?php
